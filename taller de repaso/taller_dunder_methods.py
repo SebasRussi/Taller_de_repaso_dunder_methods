@@ -12,6 +12,7 @@ class Elemento:
 
 
 class Conjunto:
+
     contador = 0
 
     def __init__(self, nombre):
@@ -31,8 +32,9 @@ class Conjunto:
         if not self.contiene(elemento):
             self.elementos.append(elemento)
 
-    def unir(self):
-        pass
+    def unir(self, otro_conjunto):
+        for elemento in otro_conjunto.elementos:
+            self.agregar_elemento(elemento)
 
 
 
